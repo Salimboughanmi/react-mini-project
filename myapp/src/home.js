@@ -12,8 +12,10 @@ const Home = () => {
     return (
         <div className="CONTAINER">
             <h1>This is Home Page</h1> <br/>
-            <button type="button" onClick={clickme} className="btn btn-primary">Primary</button>
-            <button type="button" onClick={ ()=>clickwithparams("sam") } className="btn btn-danger">danger</button>
+            <button type="button" onClick={clickme} className="btn btn-primary">clicmme</button>
+            <button type="button" onClick={ ()=>clickwithparams("sam") } className="btn btn-danger">1 parms</button>
+            <button type="button" onClick={()=>clickwithTwoparams("fedy" , 28) } className="btn btn-success">2params</button>
+
 
         </div>
     )

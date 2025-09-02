@@ -1,15 +1,18 @@
 import './App.css';
+import About from './About';
 import Navbar from './Navbar'
 import Home from './home';
+import Posts from './posts';
 function App() {
  
 
   return (
   
   <div className='App'> 
-     <Navbar /> 
-
-  <Home />
+  <Navbar /> 
+  {/* <Home />
+  <About /> */}
+  <Posts/>
   </div>
  
   );
