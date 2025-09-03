@@ -1,7 +1,7 @@
 
 import Posts from "./Posts";
 
-const PostsList = ({posts , name , hello})=> {
+const PostsList = ({posts , name , hello , DeleteAction})=> {
 return(
 
      <div className="container">
@@ -12,6 +12,8 @@ return(
       <th scope="col">ID</th>
       <th scope="col">title</th>
       <th scope="col">body</th>
+            <th scope="col">Delete</th>
+
       
     </tr>
   </thead>
@@ -25,6 +27,8 @@ return(
         <th scope="row">{post.id}</th>
     <td>{post.title}</td>
     <td>{post.body}</td>
+    <td><button onClick={()=>DeleteAction(post.id)} type="button" className="btn btn-danger">delete</button>
+</td>
    
     
         </tr>

@@ -27,13 +27,34 @@ const Posts=()=>{
     id: 4,
     title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
     body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+  },{
+ userId: 1,
+    id: 5,
+    title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+    body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+  },{
+ userId: 1,
+    id: 6,
+    title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+    body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+  },{
+ userId: 1,
+    id: 7,
+    title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+    body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
   },
 
 
 ]);
+
+    const DeleteAction=(id)=>{
+      const updatedPosts=posts.filter((post)=>post.id !== id);
+      setPosts(updatedPosts);
+     }
+
     
     return (
-      <PostsList posts={posts} hello="helooo in our posts " name={name} /> 
+      <PostsList posts={posts} hello="helooo in our posts " name={name} DeleteAction={DeleteAction} /> 
  
     );
 }
