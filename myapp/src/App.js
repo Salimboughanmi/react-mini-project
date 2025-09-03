@@ -2,7 +2,7 @@ import './App.css';
 import About from './About';
 import Navbar from './Navbar'
 import Home from './home';
-import Posts from './posts';
+import Posts from './Posts';
 function App() {
  
 

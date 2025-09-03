@@ -1,7 +1,9 @@
 import { useState } from "react";
-
+import PostsList from "./PostsList";
 
 const Posts=()=>{
+    const name ="salim"
+
     const [posts,setPosts]=useState([{
     uerId: 1,
     id: 1,
@@ -31,57 +33,9 @@ const Posts=()=>{
 ]);
     
     return (
-      <div className="container">
-
-
-
-
-
-
-
- <table className="table">
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">title</th>
-      <th scope="col">body</th>
-      
-    </tr>
-  </thead>
-  <tbody>
-   
-     
-    
-  {posts.map(post =>(
-   <tr  key={post.id}>
-    
-        <th scope="row">{post.id}</th>
-    <td>{post.title}</td>
-    <td>{post.body}</td>
-   
-    
-        </tr>
-
-))}
-      
-     
-
-  
-    
-  </tbody>
-</table>  
-
-       </div>
+      <PostsList posts={posts} hello="helooo in our posts " name={name} /> 
+ 
     );
 }
-
-
-
-
-
-
-
-
-
 
 export default Posts;
