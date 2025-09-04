@@ -34,6 +34,8 @@ return(
       <Link to={"/posts/"+post.id }  className="btn btn-info"> more </Link>
 </td>
    
+   <td> < Link to={"/edit/"+post.id}  className="btn btn-success"> Edit </Link>
+</td>
     
         </tr>
 

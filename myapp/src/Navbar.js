@@ -3,6 +3,8 @@ import Home from "./home";
 import About from "./About";
 import Posts from "./Posts";    
 import PostInfo from "./PostInfo";
+import CreatePost from "./CreatePost";
+import EditPost from "./EditPost";
 
 
 
@@ -30,6 +32,10 @@ function Navbar(){
           <Link to="/posts" className="nav-link"> List </Link>
         </li>
         
+        <li className="nav-item">
+          <Link to="/create" className="nav-link"> Create </Link>
+        </li>
+         
          
       
       </ul>
@@ -45,6 +51,9 @@ function Navbar(){
         <Route path="/about" element={<About/>} ></Route>
         <Route path="/posts" element={<Posts/>} > </Route> 
         <Route path="/posts/:id" element={<PostInfo/>} > </Route> 
+         <Route path="/create" element={<CreatePost/>} > </Route> 
+         <Route path="/edit/:id" element={<EditPost/>} > </Route> 
+
 
 
          </Routes>
