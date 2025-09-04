@@ -21,7 +21,7 @@ return(
    
      
     
-  {posts.map(post =>(
+  {posts && posts.map(post =>(
    <tr  key={post.id}>
     
         <th scope="row">{post.id}</th>
