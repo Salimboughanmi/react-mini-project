@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PostsList from "./PostsList";
 
 const Posts=()=>{
     const name ="salim"
+
+    const [checkAuth, setCheckAuth]= useState('false');
 
     const [posts,setPosts]=useState([{
     uerId: 1,
@@ -51,10 +53,21 @@ const Posts=()=>{
       const updatedPosts=posts.filter((post)=>post.id !== id);
       setPosts(updatedPosts);
      }
+     useEffect(()=>{
+        console.log("posts effect load" );
+        console.log(posts);
+
+     },[checkAuth]);
 
     
     return (
-      <PostsList posts={posts} hello="helooo in our posts " name={name} DeleteAction={DeleteAction} /> 
+      <div>
+        <button onClick={()=>setCheckAuth('true')} type="button" className="btn btn-info">Info</button>
+         <h1> status: {checkAuth}</h1> <br></br>
+      <PostsList posts={posts} hello="helooo in our posts " name={name} DeleteAction={DeleteAction}  /> 
+
+      </div>
+    
  
     );
 }

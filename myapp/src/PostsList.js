@@ -8,7 +8,7 @@ return(
  <div> <h2> {hello} {name} </h2></div>
  <table className="table">
   <thead>
-    <tr>
+    <tr> 
       <th scope="col">ID</th>
       <th scope="col">title</th>
       <th scope="col">body</th>
