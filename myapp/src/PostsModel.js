@@ -3,6 +3,12 @@ import  { useEffect, useState } from "react";
 import Posts from "./Posts";    
 const PostsModel = (url) => {
 
+
+      const DeleteAction=(id)=>{
+       const updatedPosts=posts.filter((post)=>post.id !== id);
+       setPosts(updatedPosts);
+      }
+
     const [posts,setPosts]=useState(null);
       useEffect(()=>{
         fetch(url)
@@ -14,7 +20,8 @@ const PostsModel = (url) => {
         })
 
      },[url]);
-return {posts}
+
+return {posts , DeleteAction}
   };
 
   export default PostsModel;

@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import Posts from "./Posts";
 
 const PostsList = ({posts , name , hello , DeleteAction})=> {
@@ -27,7 +27,11 @@ return(
         <th scope="row">{post.id}</th>
     <td>{post.title}</td>
     <td>{post.body}</td>
-    <td><button onClick={()=>DeleteAction(post.id)} type="button" className="btn btn-danger">delete</button>
+    <td>
+      <button onClick={()=>DeleteAction(post.id)} type="button" className="btn btn-danger">delete</button>
+</td>
+ <td>
+      <Link to={"/posts/"+post.id }  className="btn btn-info"> more </Link>
 </td>
    
     

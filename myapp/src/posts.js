@@ -5,7 +5,7 @@ import PostsModel from "./PostsModel";
 const Posts=()=>{
     const name ="salim"
   //  const url="https://jsonplaceholder.typicode.com/posts";
-  const {posts}=PostsModel("https://jsonplaceholder.typicode.com/posts");
+  const {posts , DeleteAction}=PostsModel("https://jsonplaceholder.typicode.com/posts");
 
   
 
@@ -56,17 +56,14 @@ const Posts=()=>{
    
 
 
-//  const DeleteAction=(id)=>{
-//       const updatedPosts=posts.filter((post)=>post.id !== id);
-//       setPosts(updatedPosts);
-//      }
+
     
     return (
       <div>
        
         
-     {/* <PostsList posts={posts} hello="helooo in our posts " name={name} DeleteAction={DeleteAction}  />   */}
-      <PostsList posts={posts} hello="helooo in our posts " name={name}   />
+      <PostsList posts={posts} hello="helooo in our posts " name={name} DeleteAction={DeleteAction}  />   
+      
 
       </div>
     

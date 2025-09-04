@@ -2,6 +2,7 @@ import { BrowserRouter ,Link ,Route , Routes } from "react-router-dom";
 import Home from "./home";
 import About from "./About";
 import Posts from "./Posts";    
+import PostInfo from "./PostInfo";
 
 
 
@@ -26,7 +27,7 @@ function Navbar(){
         </li>
 
         <li className="nav-item">
-          <Link to="/list" className="nav-link"> List </Link>
+          <Link to="/posts" className="nav-link"> List </Link>
         </li>
         
          
@@ -40,9 +41,12 @@ function Navbar(){
   </div>
 </nav>
          <Routes>
-         <Route path="/" element={<Home/>} /> 
-        <Route path="/about" element={<About/>} />
-        <Route path="/list" element={<Posts/>} /> 
+         <Route path="/" element={<Home/>} ></Route> 
+        <Route path="/about" element={<About/>} ></Route>
+        <Route path="/posts" element={<Posts/>} > </Route> 
+        <Route path="/posts/:id" element={<PostInfo/>} > </Route> 
+
+
          </Routes>
       </BrowserRouter>
        </div>
